@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        input {
+            width: 80%;
+            padding: 8px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+        iframe {
+            width: 80%;
+            height: 400px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Enter Video URL</h2>
+    <input type="text" id="videoUrl" placeholder="Enter video URL here">
+    <button onclick="updateIframe()">Load Video</button>
+
+    <iframe id="videoFrame" src="" allowfullscreen></iframe>
+
+    <script>
+        function updateIframe() {
+            const url = document.getElementById('videoUrl').value;
+            document.getElementById('videoFrame').src = url;
+        }
+    </script>
+
+</body>
+</html>
